@@ -1,0 +1,173 @@
+/* Sidebar Styling (adapted from aysedeniz09.github.io) */
+.sidebar {
+  position: fixed;
+  width: 220px;
+  min-height: 100vh;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidebar-logo {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.sidebar-logo svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sidebar-tagline {
+  font-size: 0.75em;
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  color: #ccc;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  transition: background 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #777;
+}
+
+.social-links i {
+  margin-right: 6px;
+}
+
+/* Main Content */
+body {
+  display: flex;
+  margin: 0;
+  font-family: Georgia, serif;
+  background-color: #f5f5f5;
+  scroll-behavior: smooth;
+}
+
+.main-content {
+  margin-left: 240px;
+  padding: 40px;
+  max-width: 900px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin-top: 30px;
+  color: #333;
+}
+
+p, li {
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+a {
+  color: navy;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+.research-areas {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.research-areas li {
+  margin-bottom: 10px;
+}
+
+.people-note {
+  background: #fff;
+  border-left: 4px solid #333;
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  body {
+    display: block;
+  }
+
+  .sidebar {
+    position: static;
+    width: auto;
+    min-height: auto;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+    max-width: 100%;
+  }
+}
