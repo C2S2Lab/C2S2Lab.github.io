@@ -37,10 +37,9 @@
       <div class="person-card">
         <img class="person-photo" src="https://aysedeniz09.github.io/img/prof_pic.jpg" alt="Ayse D. Lokmanoglu">
         <div class="person-info">
-          <h4>Ayse D. Lokmanoglu</h4>
+          <h4><a href="https://aysedeniz09.github.io/" target="_blank">Ayse D. Lokmanoglu</a></h4>
           <p class="person-role">Assistant Professor of Emerging Media Studies, Boston University College of Communication</p>
           <p>Studies political communication, polarization, and misinformation using computational and mixed methods, with a focus on visual and AI-generated imagery.</p>
-          <p><a href="https://aysedeniz09.github.io/" target="_blank">Full profile &amp; publications &rarr;</a></p>
         </div>
       </div>
     </section>
@@ -55,24 +54,91 @@
             photograph (supericons), AI-generated imagery from the Trump White House (hypericons), and the
             contemporary landscape of iconic imagery (intericonicity).</p>
           <p>Co-author, <em>Tracing Visual Communication&rsquo;s Cross-Disciplinary Citation Footprint in a Network
-            Analysis From 1975 to 2024</em> &mdash; <a href="https://icavisualcommunicationstudies.com/" target="_blank">ICA Top Paper, 2026</a>.</p>
+            Analysis From 1975 to 2024</em> &mdash; <a href="https://icavisualcommunicationstudies.com/" target="_blank">ICA Top Faculty Paper (3rd Place), 2026</a>.</p>
+          <p><a href="https://jcriss22.github.io/website/" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a></p>
         </div>
       </div>
     </section>
 
     <section id="masters-students">
       <h3>Master's Students</h3>
-      <p class="people-note">Profiles coming soon.</p>
+      <div class="person-card">
+        <div class="person-info">
+          <h4>Gigi Valentine</h4>
+          <p class="person-role">M.A. Emerging Media Studies, Class of 2027</p>
+          <p><a href="https://www.linkedin.com/in/ggvk" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></p>
+        </div>
+      </div>
+      <div class="person-card">
+        <div class="person-info">
+          <h4>Caleb Cameron</h4>
+          <p class="person-role">M.A. Emerging Media Studies, Class of 2027</p>
+          <p><a href="https://www.linkedin.com/in/caleb-cameron-b55962261/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></p>
+        </div>
+      </div>
+      <div class="person-card">
+        <div class="person-info">
+          <h4>Danica Andrea Juntura</h4>
+          <p class="person-role">M.A. Emerging Media Studies, Class of 2027</p>
+          <p><a href="https://www.linkedin.com/in/danicaandreajuntura/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></p>
+        </div>
+      </div>
     </section>
 
     <section id="undergrad-researchers">
       <h3>Undergraduate Researchers</h3>
-      <p class="people-note">Profiles coming soon.</p>
+      <div class="person-card">
+        <div class="person-info">
+          <h4>Robert Tedesco</h4>
+          <p class="person-role">Data Science, Class of 2027</p>
+          <p><a href="https://www.linkedin.com/in/rob-tedesco/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></p>
+        </div>
+      </div>
+      <div class="person-card">
+        <div class="person-info">
+          <h4>Teagan Keane</h4>
+          <p class="person-role">Journalism &amp; PR, Class of 2027</p>
+        </div>
+      </div>
+      <div class="person-card">
+        <div class="person-info">
+          <h4>Rachel Leone</h4>
+          <p class="person-role">Environmental Analysis and Policy, Class of 2028</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="alumni">
+      <h3>Alumni</h3>
+      <div class="person-card">
+        <div class="person-info">
+          <h4>Ava Howell</h4>
+          <p class="person-role">Boston University College of Communication, Class of 2026</p>
+        </div>
+      </div>
     </section>
 
     <footer class="site-footer">
-      Dog illustration generated with ChatGPT.
+      Dog illustration generated with ChatGPT.<br>
+      Last updated: <span id="last-updated">&hellip;</span>
     </footer>
   </main>
+
+  <script>
+    fetch(document.location.href, { method: 'HEAD' })
+      .then(res => {
+        const lastModified = res.headers.get('Last-Modified');
+        if (lastModified) {
+          const date = new Date(lastModified);
+          const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+          document.getElementById('last-updated').textContent = formatted;
+        } else {
+          document.getElementById('last-updated').textContent = 'recently';
+        }
+      })
+      .catch(() => {
+        document.getElementById('last-updated').textContent = 'recently';
+      });
+  </script>
 </body>
 </html>

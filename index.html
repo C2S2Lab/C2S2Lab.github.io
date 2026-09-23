@@ -83,8 +83,26 @@
     </section>
 
     <footer class="site-footer">
-      Dog illustration generated with ChatGPT.
+      Dog illustration generated with ChatGPT.<br>
+      Last updated: <span id="last-updated">&hellip;</span>
     </footer>
   </main>
+
+  <script>
+    fetch(document.location.href, { method: 'HEAD' })
+      .then(res => {
+        const lastModified = res.headers.get('Last-Modified');
+        if (lastModified) {
+          const date = new Date(lastModified);
+          const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+          document.getElementById('last-updated').textContent = formatted;
+        } else {
+          document.getElementById('last-updated').textContent = 'recently';
+        }
+      })
+      .catch(() => {
+        document.getElementById('last-updated').textContent = 'recently';
+      });
+  </script>
 </body>
 </html>

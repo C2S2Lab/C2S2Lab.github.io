@@ -203,6 +203,15 @@ a:hover {
   color: #333;
 }
 
+.person-info h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.person-info h4 a:hover {
+  text-decoration: underline;
+}
+
 .person-role {
   font-style: italic;
   color: #666;
