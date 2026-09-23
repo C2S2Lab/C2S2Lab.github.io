@@ -12,15 +12,37 @@
   align-items: center;
 }
 
-.sidebar-logo {
+.sidebar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
-.sidebar-logo svg {
+.sidebar-logo-img {
   width: 100%;
   height: auto;
-  display: block;
+}
+
+.sidebar-mascot {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #555;
+}
+
+.site-footer {
+  text-align: center;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #999;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
 }
 
 .sidebar-tagline {
