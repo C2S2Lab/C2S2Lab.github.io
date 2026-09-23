@@ -14,25 +14,27 @@
 
 .sidebar-brand {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  justify-content: center;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
-.sidebar-logo-img {
-  width: 100%;
-  height: auto;
-}
-
-.sidebar-mascot {
-  width: 90px;
-  height: 90px;
+.sidebar-brand-img {
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid #555;
+}
+
+.sidebar-tagline {
+  font-size: 0.85em;
+  text-align: center;
+  color: #fff;
+  font-family: Georgia, serif;
+  margin-top: 0;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .site-footer {
@@ -43,14 +45,6 @@
   margin-top: 50px;
   padding-top: 20px;
   border-top: 1px solid #ddd;
-}
-
-.sidebar-tagline {
-  font-size: 0.75em;
-  text-align: center;
-  color: #ccc;
-  margin-bottom: 25px;
-  letter-spacing: 0.5px;
 }
 
 .sidebar nav ul {
